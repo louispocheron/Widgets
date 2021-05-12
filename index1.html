@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style1.css" />
+    <title>Widget</title>
+  </head>
+  <body onload="initClock()">
+    <header>
+      <div id="header"></div>
+      <!--vidéo-->
+      <video class="videoheader" autoplay muted loop>
+        <source src="img/Pine tree forest.mp4" type="video/mp4" />
+      </video>
+      <!--le titre du site-->
+      <h1 class="firstp"><a href="#">LIFE SAVING WIDGETS</a></h1>
+      <!-- NAVIGATION -->
+      <nav>
+        <li><a href="#weather1">Weather</a></li>
+        <li><a href="#calc1">Calculator</a></li>
+        <li><a href="#convertisseur1">Converter</a></li>
+        <li><a href="#heure1">Saint of the day</a></li>
+      </nav>
+        </div>
+      </div>
+    </header>
+    <main>
+     <div class="heure" id="heure1">
+      <h2>Today we are the</h2>
+     <!-- DIGITAL CLOCK START-->
+     <div class="datetime">
+       <div class="Date">
+         <span id="dayname">Day</span>,
+         <span id="month">Month</span>
+         <span id="daynum">000</span>,
+         <span id="year">Year</span>
+       </div>
+        <div class="time">
+          <span id="hour">00</span>:
+          <span id="minutes">00</span>:
+          <span id="seconds">00</span>
+          <span id="period">AM</span>
+        </div>
+     </div>
+
+     <!-- DIGITAL CLOCK END--> 
+     <div class="sainte">
+       <p>We are celebrating</p>
+            <script
+type="text/javascript"
+src="http://www.net-pratique.fr/services/saintdujour.php"
+></script>
+</div> 
+  </div>   
+     <!-- LA METEO -->
+     <div class="tempsgris" id="weather1">
+     <p class="weathertext">Wanna check out your local weather ? write down your city.</p>
+     <input class="inputmeteo" type="text" placeholder="your city">
+     <!-- LE SOLEIL !! -->
+    <div class="iconsunny">
+      <div class="sun">
+        <div class="rays"></div>
+      </div>
+    </div>
+    <!-- ORAGEUX !! -->
+    <div class="icon_thunder-storm">
+      <div class="cloud"></div>
+      <div class="lightning">
+        <div class="bolt"></div>
+        <div class="bolt"></div>
+      </div>
+    </div>
+    <!-- NUAGEUX !! -->
+     <div class="icon_cloudy">
+      <div class="cloud"></div>
+      <div class="cloud"></div>
+    </div>
+    <!-- PLUIE !! -->
+    <div class="icon_rainy">
+  <div class="cloud"></div>
+  <div class="rain"></div>
+</div>
+<!-- SNOWY  !! -->
+<div class="icon_flurries">
+  <div class="cloud"></div>
+  <div class="snow">
+    <div class="flake"></div>
+    <div class="flake"></div>
+  </div>
+</div>
+ </div>
+
+
+    
+   <!-- CONVERTISSEUR -->
+<div class="convertisseur" id="convertisseur1">
+  <p class="pconverter">Feet to meters is impossible ? Here's a converter just for you</p>
+ <p class="pconvertera">Type a value in the Feet field to convert the value to Meters:</p>
+   <div class="feet">
+   <p class="label">
+     <label>Feet</label>
+     <input id="inputFeet" class="inputa" classtype="number" placeholder="Feet" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+    </p> 
+   <p class="inputb"> Meters: <span id="outputMeters" ></span></p>
+   </div>
+</div>
+
+
+
+<!--SCRIPT CONVERTISSEUR !!-->
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputMeters").innerHTML=valNum/3.2808;
+}
+</script>
+  </div>
+
+    <!--CALCULATRICE-->
+  <div class="maincalc" id="calc1">
+
+    <div class="calc_body">
+        <div class="result">
+            <p id="result">0</p>
+        </div>
+
+        <div class="buttons">
+            <button>+/-</button>
+            <button>%</button>
+            <button>C</button>
+            <button>DEL</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button>/</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>*</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>+</button>
+            <button>.</button>
+            <button>0</button>
+            <button class="equal">=</button>
+            <button>-</button>
+        </div>
+    </div>
+      
+   
+        </div>
+    </div>
+  </div>
+  <script>function getInputValue(){
+    let input = event.target.innerText
+    console.log(input);
+    printValue(input);
+}</script>
+
+<!-- FOOTER !! -->
+
+<footer>
+  <div class="trait"></div>
+  <div class="aubout">
+    <a href="#header">
+    <p class="footerp">LIFE SAVING WIDGETS</p>
+    </a>
+  </div>
+  <div class="images">
+  <p class="lastp">Copyright © 2021. All rights reserved.</p>
+ <img class="imga"  src="img/Gmail-Logo.png" alt="le logo vers le liens GMAIL">
+
+ <a href="https://github.com/louispocheron" target="_blank">
+ <img  class="imgb"  src="img/githubuse.png" alt="le logo vers le liens github">
+ </a>
+ </div>
+</footer>
+     
+     
+
+
+
+ <script src="script.js"></script>
+ </main>
+  </body>
+</html>
